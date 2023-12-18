@@ -6,7 +6,5 @@ use LopConnguoi\ConNguoi;
 
 $a = new LopConnguoi\ConNguoi('khoi');
 
-
-
 $hoTen=$a->getHoTen();
 var_dump($hoTen);
