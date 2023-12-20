@@ -65,7 +65,16 @@
  $a =  $_SERVER['DOCUMENT_ROOT'];
  $b =  $_SERVER['HTTP_HOST'];
  $c = __DIR__;
+ /**
+  * * TỰ động biên dịch đường dẫn 
+  * * Với hệ điều hành Linux, MacOs thì dùng dấu "/", Win thì ngược lại "\"
+  * * Dùng để đảm bảo đúng đường dẫn khi chạy trên nhiều hệ điều hành khác nhau
+  * TODO: Trên Win (khoi\hello\index.php) <=> Linux, MacOs (khoi/hello/index.php)
+  *
+  * ! echo "/" =>> lỗi vậy nên muốn in ra "/" thì phải viết là "//" =>> echo "//"
+  */
  $d = DIRECTORY_SEPARATOR;
+ 
  var_dump($a);PHP_EOL;echo "<br>";
  var_dump($b); echo "<br>";
 var_dump($c);PHP_EOL;echo "<br>";
