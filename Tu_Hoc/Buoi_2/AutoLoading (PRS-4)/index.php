@@ -9,7 +9,6 @@ include_once 'AutoLoading.php';
  *       }
  *       spl_autoload_register('autoload');
  */
- 
 
 $a = new ClassA;
 // var_dump(dirname(__FILE__));
