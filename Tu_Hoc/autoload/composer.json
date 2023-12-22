@@ -5,9 +5,13 @@
     "autoload": {
         "psr-4": {
             "app\\" : "app/",
-            "app_2\\namespace_app_2\\": "khoi/",
+            "app_2\\namespace_app_2\\": "double_namespace/",
             "" : "global/"
-        }
+        },
+        "files": ["helpers/functions.php"]
     },
-    "require": {}
+    "require": {
+        "phpmailer/phpmailer":"^6.9.1",
+        "php-pagination/php-pagination" : "*" 
+    }
 }

@@ -29,8 +29,8 @@
  *                               để trống phần này
  *                           }
  *                       }
- *      TODO: 6) "composer update" để cập nhật lại nhưng gì đã cấu hình =>> sau khi chạy thì sinh ra folder "vendor" và file "composer.lock"
- * 
+ *      TODO: 6) "composer dump-autoload" hoặc "composer update" để cập nhật lại nhưng gì đã cấu hình =>> sau khi chạy thì sinh ra folder "vendor" và file "composer.lock"
+ *                 ! tất cả các thư viện mà bạn muốn require thì sẽ ở trong vendor
  * 
  * * Cấu Hình autoload trong composer
  *      TODO: Khi lên documention ở trang web để tải composer, ta có code mẫu sau (gõ psr-4 ở phần tìm kiếm -> ctrl F "autoload")
@@ -49,6 +49,10 @@
  *                                  app\\ =>> namespace của "FOLDER app", muốn sử dụng các file chứa class trong folder này thì ta phải 
  *                                                                                      cho chúng 1 namespace "namespace app;"   
  *                             * TIP: nên đặt trùng nhau tên thư mục - tên namespace của từng file trong folder đó - tên cấu hình trong autoload psr4
- *      ? "Vendor\\Namespace\\": ""
+ *      ? "Vendor\\Namespace\\": "" là sao
+ *              * "Vendor\\Namespace\\" là gì
+ *                      hiểu đơn giản thì nó tương tự như "namespace 1 cấp (src/)" trên kia nhưng tên nó dài hơn
+ *                      cái này là đặt tên, TÊN THAY THẾ cho ĐƯỜNG DẪN SAU DẤU 2 CHẤM
+ *              
  *              
  */

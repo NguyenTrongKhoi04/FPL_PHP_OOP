@@ -6,7 +6,8 @@ $vendorDir = dirname(__DIR__);
 $baseDir = dirname($vendorDir);
 
 return array(
-    'app_2\\namespace_app_2\\' => array($baseDir . '/khoi'),
+    'app_2\\namespace_app_2\\' => array($baseDir . '/double_namespace'),
     'app\\' => array($baseDir . '/app'),
+    'PHPMailer\\PHPMailer\\' => array($vendorDir . '/phpmailer/phpmailer/src'),
     '' => array($baseDir . '/global'),
 );
