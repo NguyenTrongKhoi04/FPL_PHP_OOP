@@ -1,5 +1,9 @@
 <?php 
 /**
+ * * =============================================================
+ * *                VÍ DỤ CỤ THỂ Ở FOLDER autoload
+ * * =============================================================
+ * 
  * * Cài đặt Composer trên máy
  *      TODO: lên trang https://getcomposer.org/ để instanll về và giải nén. Lưu ý cần phải cài php trước (xampp, laragon,...) 
  *          ! hệ điều hành Linux và MacOS sẽ làm thêm 1 số thao tác nữa
@@ -47,12 +51,42 @@
  *                             TODO: Trong folder autoload chứa folder app mà app chứa các file như Home.php, Product.php (file chứa các class)
  *                             TODO: Ở tình huống này, ta sẽ đặt "app\\" : "app/" 
  *                                  app\\ =>> namespace của "FOLDER app", muốn sử dụng các file chứa class trong folder này thì ta phải 
- *                                                                                      cho chúng 1 namespace "namespace app;"   
+ *                                                                                     cho chúng 1 namespace "namespace app;"   
+ *              ! Nếu muốn 1 "Monolog" làm việc với nhiều folder =>> ví dụ: "app\\":["app/","global/"]
  *                             * TIP: nên đặt trùng nhau tên thư mục - tên namespace của từng file trong folder đó - tên cấu hình trong autoload psr4
  *      ? "Vendor\\Namespace\\": "" là sao
  *              * "Vendor\\Namespace\\" là gì
  *                      hiểu đơn giản thì nó tương tự như "namespace 1 cấp (src/)" trên kia nhưng tên nó dài hơn
  *                      cái này là đặt tên, TÊN THAY THẾ cho ĐƯỜNG DẪN SAU DẤU 2 CHẤM
- *              
- *              
+ *      ? Bạn còn có thể chèn thêm vào sao psr-4 =>> "files": ["helpers/functions.php"]   
+ * * Cấu hình require 
+ *       TODO: Bạn ghi thư viện và version của thư viện đó 
+ *                 "require": {
+ *                      "phpmailer/phpmailer":"^6.9.1",
+ *                      "php-pagination/php-pagination" : "*" 
+ *                  }
+ *                      ! "*" ở đây nghĩa là phiên bản bất kỳ
+ * * Global namespace
+ *       tức là namespace cục bộ, nó được viết trong psr-4 của autoload
+ *          TODO: "" : "global/":
+ * 
+ * * ================ Ví Dụ Tổng Thể của file composer.json - lấy từ ví dụ ở folder autoload ==================================
+ *                     {
+ *               "name": "nguyen_trong_khoi/autoload",
+ *               "description": "autoload voi composer",
+ *               "type": "library",
+ *               "autoload": {
+ *                   "psr-4": {
+ *                       "app\\" : "app/",
+ *                       "app_2\\namespace_app_2\\": "double_namespace/",
+ *                       "" : "global/"
+ *                   },
+ *                   "files": ["helpers/functions.php"]
+ *               },
+ *               "require": {
+ *                   "phpmailer/phpmailer":"^6.9.1",
+ *                   "php-pagination/php-pagination" : "*" 
+ *               }
+ *           }
+ * * ==========================================================================================================================
  */
