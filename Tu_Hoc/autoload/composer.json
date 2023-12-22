@@ -1,0 +1,13 @@
+{
+    "name": "nguyen_trong_khoi/autoload",
+    "description": "autoload voi composer",
+    "type": "library",
+    "autoload": {
+        "psr-4": {
+            "app\\" : "app/",
+            "app_2\\namespace_app_2\\": "khoi/",
+            "" : "global/"
+        }
+    },
+    "require": {}
+}
