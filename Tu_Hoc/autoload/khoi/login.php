@@ -1,8 +1,8 @@
 <?php 
 namespace app_2\namespace_app_2;
- class test{
+ class login{
     public function __construct()
     {
-        echo "đây là test 2";
+        echo "đây là login";
     }
  }
