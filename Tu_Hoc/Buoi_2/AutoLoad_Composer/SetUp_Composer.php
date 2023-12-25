@@ -67,9 +67,10 @@
  *                  }
  *                      ! "*" ở đây nghĩa là phiên bản bất kỳ
  * * Global namespace
- *       tức là namespace cục bộ, nó được viết trong psr-4 của autoload
+ *       tức là namespace cục bộ của 1 folder nào đó, nó được viết trong psr-4 của autoload
+ *       khi bạn dùng class mà không khai báo namespace =>> dùng đến namespace cục bộ
  *          TODO: "" : "global/":
- * 
+ * ! ========================== 21/12/2023: Theo như tôi hiểu thì đặt tên class và file trùng nhau thì composer mới hoạt động được ==============================
  * * ================ Ví Dụ Tổng Thể của file composer.json - lấy từ ví dụ ở folder autoload ==================================
  *                     {
  *               "name": "nguyen_trong_khoi/autoload",
